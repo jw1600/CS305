@@ -1,1 +1,22 @@
 # CS305
+•Briefly summarize your client, Artemis Financial, and its software requirements. Who was the client? What issue did the company want you to address?
+Artemis Financial is a financial consulting company that develops individualized financial plans for clients, covering savings, retirement, investments, and insurance. Their software requirements include modernizing their web-based application to handle sensitive personal and financial data securely. The primary issue they want addressed is ensuring secure communications and data storage to protect against external threats, while maintaining compliance with regulations.
+
+•What did you do well when you found your client’s software security vulnerabilities? Why is it important to code securely? What value does software security add to a company’s overall well-being?
+Use the OWASP Dependency-Check tool to quickly identify known vulnerabilities in third-party libraries and reduce the workload of manual inspection. Through manual code review, potential security issues in the code base were identified. The SHA-256 hash function was successfully integrated to ensure the confidentiality and integrity of data during transmission and storage.
+The reason why secure coding is important is that it reduces the risk of data being maliciously exploited through input verification, encryption and other measures. It can protect the security of customer data. For companies, secure coding can enhance customer trust and attract more business. It can reduce costs and reduce the high cost of repairing data leaks by identifying and fixing vulnerabilities early.
+
+•Which part of the vulnerability assessment was challenging or helpful to you?
+Identifying false positives was the most challenging. There were a lot of false positives in the OWASP Dependency-Check report, and it took a lot of time to analyze and filter them. But it also taught me how to operate this function skillfully.
+
+•How did you increase layers of security? In the future, what would you use to assess vulnerabilities and decide which mitigation techniques to use?
+Methods to increase the security level: Cryptographic protocol: Implemented HTTPS communication and tested with self-signed certificates. Hash algorithm: Integrated SHA-256 hash function for file verification and data integrity check. Dependency update: Updated the vulnerable library and suppressed the warning that was verified to be a false positive. Future assessment and mitigation strategy: Regular dependency check: Run OWASP Dependency-Check regularly to learn about new vulnerabilities in a timely manner. Code review: Manually review the code to identify logical errors or security omissions in the coding.
+
+•How did you make certain the code and software application were functional and secure? After refactoring the code, how did you check to see whether you introduced new vulnerabilities?
+Run the code in Eclipse to ensure there are no syntax or logic errors. Security Testing: Implement HTTPS communication and verify that the self-signed certificate is correctly applied; verify file integrity through SHA-256 checksum. Rerun Dependency Check: After adding new dependencies or updating libraries, rerun OWASP Dependency-Check and compare the before and after reports to identify new vulnerabilities.
+
+•What resources, tools, or coding practices did you use that might be helpful in future assignments or tasks?
+OWASP Dependency-Check: Used to automatically detect third-party library vulnerabilities. Eclipse IDE: Used for code writing, debugging, and running local tests. Built-in Maven support simplifies dependency management. Maven: Manage project dependencies, integrate Dependency-Check plug-in, and optimize the build process. Java Keytool: Generate and manage SSL certificates for testing secure communications.
+
+•Employers sometimes ask for examples of work that you have successfully completed to show your skills, knowledge, and experience. What might you show future employers from this assignment?
+Content that can be displayed: Vulnerability assessment report: Demonstrate the use of OWASP Dependency-Check. SHA-256 implementation: Demonstrate code snippets that integrate hash algorithms to ensure data integrity, highlighting the ability to apply encryption technology. Dependency management: Demonstrate Maven configuration and Dependency-Check reports, highlighting the ability to manage complex dependencies and reduce vulnerabilities.
